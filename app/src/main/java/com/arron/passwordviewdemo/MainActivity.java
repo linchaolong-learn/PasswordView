@@ -6,11 +6,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.arron.passwordview.UnderlineEditText;
+import com.arron.passwordview.PasswordView2;
 import com.arron.passwordview.PasswordView;
 
 public class MainActivity extends AppCompatActivity implements PasswordView.PasswordListener, View.OnClickListener {
     private String tag = getClass().getSimpleName();
-    private PasswordView passwordView;
+    private PasswordView2 passwordView;
     private Button btnChangeMode;
 
 
@@ -18,10 +20,12 @@ public class MainActivity extends AppCompatActivity implements PasswordView.Pass
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        passwordView = (PasswordView) findViewById(R.id.passwordView);
+        passwordView = (PasswordView2) findViewById(R.id.passwordView);
         btnChangeMode = (Button) findViewById(R.id.btn_change_mode);
         btnChangeMode.setOnClickListener(this);
         passwordView.setPasswordListener(this);
+        UnderlineEditText underlineEditText = ((UnderlineEditText) findViewById(R.id.editTextView));
+        underlineEditText.setCharacterCount(8);
     }
 
     @Override

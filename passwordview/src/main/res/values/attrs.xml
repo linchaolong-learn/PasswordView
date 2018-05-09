@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <declare-styleable name="PasswordView">
         <attr name="passwordLength" format="integer" />
         <attr name="passwordPadding" format="dimension" />
@@ -13,5 +14,15 @@
             <enum name="underline" value="0" />
             <enum name="rect" value="1" />
         </attr>
+        <attr name="isJustNumber" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="UnderlineEditText">
+        <attr name="underline_color" format="color" />
+        <attr name="text_color" format="color" />
+        <attr name="character_count" format="integer" />
+        <attr name="text_size" format="dimension" />
+        <attr name="background_color" format="color" />
+    </declare-styleable>
+
 </resources>

@@ -5,23 +5,42 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#2B2F3A"
     tools:context="com.arron.passwordviewdemo.MainActivity">
 
 
-    <com.arron.passwordview.PasswordView
-        android:id="@+id/passwordView"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        app:cipherEnable="true" />
+        android:orientation="vertical">
+
+        <com.arron.passwordview.PasswordView2
+            android:id="@+id/passwordView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cipherEnable="false"
+            app:passwordLength="8"
+            app:passwordPadding="4dp" />
+
+        <com.arron.passwordview.UnderlineEditText
+            android:id="@+id/editTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@null"
+            app:background_color="#2B2F3A"
+            app:text_color="#FFFFFFFF"
+            app:text_size="28sp"
+            app:underline_color="#FFFFFFFF" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_change_mode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CHANGE_MODE"/>
+        android:text="CHANGE_MODE" />
+
 </RelativeLayout>
